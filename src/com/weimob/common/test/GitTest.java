@@ -12,5 +12,7 @@ public class GitTest {
         System.out.println("master 第四次修改");
         System.out.println("develop 第四次修改");
         System.out.println("master 第五次修改");
+        System.out.println("master 第六次修改");
+        System.out.println("master 第七次修改");
     }
 }
