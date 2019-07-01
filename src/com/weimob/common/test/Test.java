@@ -1,8 +1,8 @@
 package com.weimob.common.test;
 
 /**
- * Created by Curry on 2018/9/5
- * @author 123
+ * @author  Curry
+ * @date    2019/6/25 16:55
  */
 public class Test {
     public static void main(String[] args) {
