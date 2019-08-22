@@ -1,4 +1,4 @@
-package com.weimob.common.test;
+package com.weimob.common.ParallelTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -69,8 +69,5 @@ public class ParallelSteamTest {
     }).findAny();
         return result.get();
     }
-
-
-
 
 }

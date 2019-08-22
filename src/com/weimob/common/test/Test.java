@@ -1,5 +1,9 @@
 package com.weimob.common.test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 /**
  * @author  Curry
  * @date    2019/6/25 16:55
@@ -14,6 +18,30 @@ public class Test {
         String requests_url="http://%s.consortium.n.dev.weimob.com";
         String format = String.format(requests_url, 2528);
         System.out.println(format);
+        //testFilter();
+        testMap();
+    }
+
+    private static void testMap(){
+        HashMap<Integer,String> map=new HashMap<>();
+        map.put(1, "1");
+        map.put(2, "2");
+        map.put(3, "3");
+        map.keySet().forEach(x->{
+            System.out.println(x);
+            System.out.println(map.get(x));
+        });
+    }
+
+
+    private static void testFilter(){
+        List<Integer> list=new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
+        list.stream().filter(x -> x.equals(1)).count();
+        List<Integer> list1=new ArrayList<>();
+        list.stream().peek(list1::add).forEach(System.out::println);
     }
 
     // 递归求和1+2+3+.....+n

@@ -1,11 +1,5 @@
 package com.weimob.common.test;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
 /**
  * Created by Curry on 2018/11/9
  */
@@ -34,4 +28,6 @@ public class GitTest {
         System.out.println("develop 第十二次修改");
         System.out.println("master  第十四次修改");
     }
+
+    
 }

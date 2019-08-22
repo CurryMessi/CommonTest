@@ -1,4 +1,4 @@
-package com.weimob.common.test;
+package com.weimob.common.ParallelTest;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -51,9 +51,9 @@ public class CompletableFutureTest {
     /**
      *  以上代码，我们首先获取CompletableFutures集合，然后在每个future上调用join方法去等待他们逐一执行完。
      *  注意，join方法类似于get方法，唯一的不通点是前者不会抛出任何的受检查异常，所以在lambda表达式中更方便一些.
-     * 再有，你必须使用两个独立的stream(pipelines)管道，而不是将两个map操作放在一起，
-     * 因为stream的中间操作都是懒加载的(intermediate stream operations are lazy)，
-     * 你最终必须按顺序处理你的任务。这就是为什么首先需要CompletableFuture在list中，然后允许他们开始执行，直到执行完毕.
+     *  再有，你必须使用两个独立的stream(pipelines)管道，而不是将两个map操作放在一起，
+     *  因为stream的中间操作都是懒加载的(intermediate stream operations are lazy)，
+     *  你最终必须按顺序处理你的任务。这就是为什么首先需要CompletableFuture在list中，然后允许他们开始执行，直到执行完毕.
      */
     // 使用CompletableFutures
     // 它花费了2秒，因为此次并发执行使用了7个线程,比parallel stream少一个main线程
@@ -94,6 +94,7 @@ public class CompletableFutureTest {
         long duration = (System.nanoTime() - start) / 1_000_000;
         System.out.printf("Processed %d tasks in %d millis\n", tasks.size(), duration);
         System.out.println(result);
+        // 关闭线程（应该用线程池来管理）
         executor.shutdown();
     }
 

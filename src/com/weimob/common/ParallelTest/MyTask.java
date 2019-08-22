@@ -1,4 +1,4 @@
-package com.weimob.common.test;
+package com.weimob.common.ParallelTest;
 
 /**
  * @author Curry
