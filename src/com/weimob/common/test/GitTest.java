@@ -29,6 +29,7 @@ public class GitTest {
         System.out.println("master  第十四次修改");
 
         System.out.println("dev测试A");
+        System.out.println("dev测试B");
     }
 
     
