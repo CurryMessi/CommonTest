@@ -33,6 +33,8 @@ public class GitTest {
 
         System.out.println("master测试A");
         System.out.println("master测试B");
+
+        System.out.println("devGIT test修改");
     }
 
     
