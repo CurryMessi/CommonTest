@@ -38,5 +38,7 @@ public class IntTest {
 
         double average1 = collect.stream().mapToInt(User::getAge).average().orElse(0);
         System.out.println("average1="+average1);
+
+        System.out.println("dev int test修改");
     }
 }
