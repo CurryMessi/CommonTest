@@ -30,6 +30,9 @@ public class GitTest {
 
         System.out.println("dev测试A");
         System.out.println("dev测试B");
+
+        System.out.println("master测试A");
+        System.out.println("master测试B");
     }
 
     
